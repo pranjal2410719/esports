@@ -33,7 +33,8 @@ export default function Login() {
       }
       setLoading(false);
     } catch (err) {
-      setError('Connection error. Please check your internet connection.');
+      console.error('Login error:', err);
+      setError('Unable to connect to authentication service. Please check your Supabase configuration.');
       setLoading(false);
     }
   };
