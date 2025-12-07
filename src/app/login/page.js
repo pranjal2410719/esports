@@ -16,21 +16,26 @@ export default function Login() {
     setLoading(true);
     setError('');
 
-    const { data, error: loginError } = await supabase.auth.signInWithPassword({
-      email,
-      password
-    });
+    try {
+      const { data, error: loginError } = await supabase.auth.signInWithPassword({
+        email,
+        password
+      });
 
-    if (loginError) {
-      setError(loginError.message);
+      if (loginError) {
+        setError(loginError.message);
+        setLoading(false);
+        return;
+      }
+
+      if (data.session) {
+        router.push('/dashboard');
+      }
       setLoading(false);
-      return;
+    } catch (err) {
+      setError('Connection error. Please check your internet connection.');
+      setLoading(false);
     }
-
-    if (data.session) {
-      router.push('/dashboard');
-    }
-    setLoading(false);
   };
 
   const handleGoogleLogin = async () => {

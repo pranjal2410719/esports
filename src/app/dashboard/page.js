@@ -23,15 +23,15 @@ export default function Dashboard() {
   if (loading) return <div className="min-h-screen bg-gray-50 flex items-center justify-center">Loading...</div>;
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
-      <div className="max-w-7xl mx-auto px-6">
+    <div className="min-h-screen bg-gray-50 py-4 sm:py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">Overview</h1>
+        <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">Overview</h1>
 
-        <div className="grid grid-cols-12 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6">
           
           {/* Avatar & Points */}
-          <div className="col-span-4 space-y-6">
+          <div className="lg:col-span-4 space-y-4 sm:space-y-6">
             <div className="bg-white rounded-2xl p-6 shadow-sm">
               <a href="/profile" className="block">
                 <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-red-500 to-purple-600 flex items-center justify-center text-white text-5xl font-bold cursor-pointer hover:opacity-90 transition">
@@ -63,7 +63,7 @@ export default function Dashboard() {
           </div>
 
           {/* Level & Rewards */}
-          <div className="col-span-4 space-y-6">
+          <div className="lg:col-span-4 space-y-4 sm:space-y-6">
             <div className="bg-white rounded-2xl p-6 shadow-sm">
               <div className="flex justify-between items-center mb-4">
                 <h3 className="text-gray-900 font-semibold">My Level</h3>
@@ -107,7 +107,7 @@ export default function Dashboard() {
           </div>
 
           {/* Trophies & Quests */}
-          <div className="col-span-4 space-y-6">
+          <div className="lg:col-span-4 space-y-4 sm:space-y-6">
             <div className="bg-white rounded-2xl p-6 shadow-sm">
               <h3 className="text-gray-900 font-semibold mb-4">Latest Trophy</h3>
               <div className="text-center">
@@ -148,7 +148,7 @@ export default function Dashboard() {
           </div>
 
           {/* Stats Row */}
-          <div className="col-span-4 bg-white rounded-2xl p-6 shadow-sm">
+          <div className="lg:col-span-4 bg-white rounded-2xl p-4 sm:p-6 shadow-sm">
             <h3 className="text-gray-500 text-sm mb-2">Tournaments Played</h3>
             <div className="flex items-center justify-between">
               <button className="text-gray-400 hover:text-gray-600">←</button>
@@ -157,7 +157,7 @@ export default function Dashboard() {
             </div>
           </div>
 
-          <div className="col-span-4 bg-white rounded-2xl p-6 shadow-sm">
+          <div className="lg:col-span-4 bg-white rounded-2xl p-4 sm:p-6 shadow-sm">
             <h3 className="text-gray-900 font-semibold mb-2">Your Tokens</h3>
             <p className="text-3xl font-bold text-yellow-600 mb-2">34</p>
             <p className="text-gray-500 text-xs mb-4">Exchange tokens for rewards</p>
@@ -166,7 +166,7 @@ export default function Dashboard() {
             </button>
           </div>
 
-          <div className="col-span-4 bg-white rounded-2xl p-6 shadow-sm">
+          <div className="lg:col-span-4 bg-white rounded-2xl p-4 sm:p-6 shadow-sm">
             <h3 className="text-gray-900 font-semibold mb-2">Energy</h3>
             <p className="text-3xl font-bold text-blue-600 mb-2">⚡ 10</p>
             <p className="text-gray-500 text-xs mb-4">Use energy to boost performance</p>
@@ -176,9 +176,9 @@ export default function Dashboard() {
           </div>
 
           {/* Endorsements */}
-          <div className="col-span-12 bg-white rounded-2xl p-6 shadow-sm">
+          <div className="lg:col-span-12 bg-white rounded-2xl p-4 sm:p-6 shadow-sm">
             <h3 className="text-gray-900 font-semibold mb-4">Recent Stats</h3>
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
               <div>
                 <p className="text-gray-500 text-sm mb-1">Win Rate</p>
                 <div className="flex items-center gap-2">

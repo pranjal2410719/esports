@@ -5,15 +5,15 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50">
       
       {/* Hero Section */}
-      <section className="relative h-[600px] bg-gradient-to-br from-red-600 via-purple-600 to-blue-600 flex items-center justify-center text-center px-6">
+      <section className="relative min-h-[500px] sm:h-[600px] bg-gradient-to-br from-red-600 via-purple-600 to-blue-600 flex items-center justify-center text-center px-4 sm:px-6 py-12">
         <div className="max-w-4xl">
-          <h1 className="text-6xl font-extrabold text-white mb-6 drop-shadow-lg">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6 drop-shadow-lg">
             COMPETE. WIN. DOMINATE.
           </h1>
-          <p className="text-xl text-white/90 mb-8">
+          <p className="text-base sm:text-lg lg:text-xl text-white/90 mb-8">
             Join India's premier esports tournament platform. Compete in BGMI, Valorant, Free Fire and more.
           </p>
-          <div className="flex gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="/tournaments" className="px-8 py-4 bg-white text-red-600 rounded-lg font-bold text-lg hover:bg-gray-100 transition">
               Browse Tournaments
             </a>
@@ -25,8 +25,8 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-6 grid grid-cols-4 gap-8 text-center">
+      <section className="py-12 sm:py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 text-center">
           <div>
             <p className="text-4xl font-bold text-red-600 mb-2">10K+</p>
             <p className="text-gray-600">Active Players</p>
@@ -47,10 +47,10 @@ export default function Home() {
       </section>
 
       {/* Featured Games */}
-      <section className="py-16 px-6">
+      <section className="py-12 sm:py-16 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Featured Games</h2>
-          <div className="grid grid-cols-3 gap-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8 text-center">Featured Games</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             <a href="/tournaments?game=bgmi" className="group relative h-64 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition">
               <div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-red-600"></div>
               <div className="absolute inset-0 flex items-center justify-center">
@@ -83,10 +83,10 @@ export default function Home() {
       </section>
 
       {/* How It Works */}
-      <section className="py-16 bg-white px-6">
+      <section className="py-12 sm:py-16 bg-white px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">How It Works</h2>
-          <div className="grid grid-cols-3 gap-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8 sm:mb-12 text-center">How It Works</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-3xl">1️⃣</span>
@@ -113,10 +113,10 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-red-600 to-purple-600 text-center px-6">
+      <section className="py-12 sm:py-20 bg-gradient-to-r from-red-600 to-purple-600 text-center px-4 sm:px-6">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Start Your Journey?</h2>
-          <p className="text-xl text-white/90 mb-8">Join thousands of gamers competing for glory and prizes</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6">Ready to Start Your Journey?</h2>
+          <p className="text-base sm:text-xl text-white/90 mb-6 sm:mb-8">Join thousands of gamers competing for glory and prizes</p>
           <a href="/signup" className="inline-block px-10 py-4 bg-white text-red-600 rounded-lg font-bold text-lg hover:bg-gray-100 transition">
             Create Free Account
           </a>
@@ -124,8 +124,8 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12 px-6">
-        <div className="max-w-6xl mx-auto grid grid-cols-4 gap-8">
+      <footer className="bg-gray-900 text-white py-8 sm:py-12 px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           <div>
             <h4 className="font-bold mb-4">E-Arena</h4>
             <p className="text-gray-400 text-sm">India's premier esports tournament platform</p>
