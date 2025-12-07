@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import { createClient } from '@supabase/supabase-js';
-import { Card } from '@e-arena/ui';
-import { formatDate } from '@e-arena/utils';
+
+const formatDate = (date) => new Date(date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL,
@@ -36,7 +36,7 @@ export default function TournamentsApp() {
               <div className="flex justify-between items-start mb-4">
                 <div>
                   <h3 className="font-bold text-xl text-gray-900 mb-2">{t.name}</h3>
-                  <p className="text-gray-600 text-sm">{formatDate(t.start_date)}</p>
+                  <p className="text-gray-600 text-sm">{t.start_date ? formatDate(t.start_date) : 'TBA'}</p>
                   <p className="text-red-600 font-bold mt-2">{t.prize_pool}</p>
                 </div>
                 <span className="px-3 py-1 rounded-full bg-green-100 text-green-700 text-sm font-medium">
