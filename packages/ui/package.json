@@ -1,0 +1,12 @@
+{
+  "name": "@e-arena/ui",
+  "version": "0.1.0",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": "./index.js"
+  },
+  "peerDependencies": {
+    "react": "^19.2.0"
+  }
+}
